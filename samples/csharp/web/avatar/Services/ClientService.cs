@@ -34,7 +34,8 @@ namespace Avatar.Services
             clientContext.ChatInitiated = false;
             clientContext.Messages = [];
             clientContext.IsSpeaking = false;
-            clientContext.SpokenTextQueue = new Queue<string>();
+            clientContext.SpeakingText = null;
+            clientContext.SpokenTextQueue = new LinkedList<string>();
             clientContext.SpeakingThread = null;
             clientContext.LastSpeakTime = null;
 
@@ -51,6 +52,11 @@ namespace Avatar.Services
             }
 
             return context;
+        }
+
+        public void RemoveClient(Guid clientId)
+        {
+            _clientContexts.TryRemove(clientId, out _);
         }
     }
 }

@@ -9,10 +9,7 @@ See the [accompanying article](https://docs.microsoft.com/azure/cognitive-servic
 Before you get started, here's a list of prerequisites:
 
 * A subscription key for the Speech service. See [Try the speech service for free](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started).
-* On Windows and Linux Python 3.6 or later needs to be installed. On Mac, minimum version for Python is 3.7. Downloads are available [here](https://www.python.org/downloads/).
-* The Python Speech SDK package is available for Windows (x64 and x86), Mac x64 (macOS X version 10.14 or later), Mac arm64 (macOS version 11.0 or later), and [specific Linux distributions and target architectures](https://docs.microsoft.com/azure/cognitive-services/speech-service/speech-sdk?tabs=linux).
-* On Linux, see the [Linux platform requirements](https://learn.microsoft.com/azure/ai-services/speech-service/quickstarts/setup-platform?tabs=linux&pivots=programming-language-python#platform-requirements) for installing the required dependencies.
-* On Windows you need the [Microsoft Visual C++ Redistributable for Visual Studio 2017](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) for your platform.
+* See the [Speech SDK installation quickstart](https://learn.microsoft.com/azure/ai-services/speech-service/quickstarts/setup-platform?pivots=programming-language-python) for details on system requirements and setup.
 
 ## Get the Speech SDK Python Package
 
@@ -28,7 +25,8 @@ Note: this tutorial will not work without changes for any version earlier than 1
 
 ## Run the sample
 
-Before you run the sample code, replace the dummy values `YourSubscriptionKey` and `YourServiceRegion` by your subscription information.
+Before you run the sample code, replace the value `YourSubscriptionKey` with your subscription key and
+replace the value `https://YourServiceRegion.api.cognitive.microsoft.com` with the endpoint for your Speech resource. You can find this endpoint in the Azure Portal under your Speech resource's "Keys and Endpoint" section.
 You can either load the quickstart sample in your IDE and run it there or run it in a console by navigating to the directory you downloaded it to and running the command
 
 ```sh

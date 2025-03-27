@@ -28,6 +28,8 @@ namespace Avatar.Models
 
         public object? SpeechSynthesizer { get; set; }
 
+        public object? SpeechSynthesizerConnection { get; set; }
+
         public string? SpeechToken { get; set; }
 
         public string? IceToken { get; set; }
@@ -38,7 +40,9 @@ namespace Avatar.Models
 
         public bool IsSpeaking { get; set; }
 
-        public Queue<string> SpokenTextQueue { get; set; } = new Queue<string>();
+        public string? SpeakingText { get; set; }
+
+        public LinkedList<string>? SpokenTextQueue { get; set; } = new LinkedList<string>();
 
         public Thread? SpeakingThread { get; set; }
 
